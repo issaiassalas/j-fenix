@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accounts",
+  "info": {
+    "name": "account",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "wallet": {
+      "type": "string"
+    },
+    "secret_phrase": {
+      "type": "string",
+      "private": true
+    },
+    "private_key": {
+      "type": "string",
+      "private": true
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "account"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "kind": "singleType",
+  "collectionName": "coin_details",
+  "info": {
+    "name": "CoinDetails",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "assetId": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "issueHeight": {
+      "type": "biginteger"
+    },
+    "issueTimestamp": {
+      "type": "biginteger"
+    },
+    "issuer": {
+      "type": "string"
+    },
+    "issuerPublicKey": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "decimals": {
+      "type": "integer"
+    },
+    "reissuable": {
+      "type": "boolean"
+    },
+    "quantity": {
+      "type": "biginteger"
+    },
+    "scripted": {
+      "type": "boolean"
+    },
+    "minSponsoredAssetFee": {
+      "type": "biginteger"
+    },
+    "originTransactionId": {
+      "type": "string"
+    }
+  }
+}

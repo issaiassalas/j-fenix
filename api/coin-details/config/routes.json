@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/coin-details",
+      "handler": "coin-details.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/coin-details",
+      "handler": "coin-details.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/coin-details",
+      "handler": "coin-details.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

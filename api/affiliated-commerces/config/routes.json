@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/affiliated-commerces",
+      "handler": "affiliated-commerces.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/affiliated-commerces/count",
+      "handler": "affiliated-commerces.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/affiliated-commerces/:id",
+      "handler": "affiliated-commerces.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/affiliated-commerces",
+      "handler": "affiliated-commerces.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/affiliated-commerces/:id",
+      "handler": "affiliated-commerces.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/affiliated-commerces/:id",
+      "handler": "affiliated-commerces.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
