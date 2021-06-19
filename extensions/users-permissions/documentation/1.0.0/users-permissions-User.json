@@ -1295,13 +1295,19 @@
                 "logo": {
                   "type": "string"
                 },
-                "descripction": {
+                "description": {
                   "type": "string"
                 },
                 "approved": {
                   "type": "boolean"
                 },
                 "user": {
+                  "type": "string"
+                },
+                "web_page": {
+                  "type": "string"
+                },
+                "social_media": {
                   "type": "string"
                 },
                 "published_at": {

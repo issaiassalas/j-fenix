@@ -1,19 +1,18 @@
 {
   "paths": {
-    "/affiliated-commerces": {
+    "/jfenix": {
       "get": {
         "deprecated": false,
-        "description": "Find all the affiliated-commerces's records",
+        "description": "Find all the jfenix's records",
         "responses": {
           "200": {
-            "description": "Retrieve affiliated-commerces document(s)",
+            "description": "Retrieve jfenix document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Jfenix"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Affiliated-commerces"
+          "Jfenix"
         ],
         "parameters": [
           {
@@ -193,210 +192,16 @@
           }
         ]
       },
-      "post": {
-        "deprecated": false,
-        "description": "Create a new affiliated-commerces record",
-        "responses": {
-          "200": {
-            "description": "Retrieve affiliated-commerces document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Affiliated-commerces"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewAffiliated-commerces"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/affiliated-commerces/count": {
-      "get": {
-        "deprecated": false,
-        "description": "Retrieve the numver of affiliated-commerces documents",
-        "responses": {
-          "200": {
-            "description": "Retrieve affiliated-commerces document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Affiliated-commerces"
-        ],
-        "parameters": []
-      }
-    },
-    "/affiliated-commerces/{id}": {
-      "get": {
-        "deprecated": false,
-        "description": "Find one affiliated-commerces record",
-        "responses": {
-          "200": {
-            "description": "Retrieve affiliated-commerces document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Affiliated-commerces"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
       "put": {
         "deprecated": false,
-        "description": "Update a single affiliated-commerces record",
+        "description": "Update a single jfenix record",
         "responses": {
           "200": {
-            "description": "Retrieve affiliated-commerces document(s)",
+            "description": "Retrieve jfenix document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Jfenix"
                 }
               }
             }
@@ -434,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Affiliated-commerces"
+          "Jfenix"
         ],
         "requestBody": {
           "description": "",
@@ -442,30 +247,19 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAffiliated-commerces"
+                "$ref": "#/components/schemas/NewJfenix"
               }
             }
           }
         },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
+        "parameters": []
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single affiliated-commerces record",
+        "description": "Delete a single jfenix record",
         "responses": {
           "200": {
-            "description": "deletes a single affiliated-commerces based on the ID supplied",
+            "description": "deletes a single jfenix based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,26 +302,72 @@
         },
         "summary": "",
         "tags": [
-          "Affiliated-commerces"
+          "Jfenix"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
+        "parameters": []
+      }
+    },
+    "/jfenix/history": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "Retrieve jfenix document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
             }
           }
-        ]
+        },
+        "summary": "",
+        "tags": [
+          "Jfenix"
+        ],
+        "parameters": []
       }
     }
   },
   "components": {
     "schemas": {
-      "Affiliated-commerces": {
+      "Jfenix": {
         "required": [
           "id"
         ],
@@ -535,141 +375,7 @@
           "id": {
             "type": "string"
           },
-          "name": {
-            "type": "string"
-          },
-          "logo": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "description": {
-            "type": "string"
-          },
-          "approved": {
-            "type": "boolean",
-            "default": false
-          },
-          "user": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmationToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "account": {
-                "type": "string"
-              },
-              "affiliated_commerces": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "web_page": {
-            "type": "string"
-          },
-          "social_media": {
             "type": "string"
           },
           "published_at": {
@@ -678,25 +384,9 @@
           }
         }
       },
-      "NewAffiliated-commerces": {
+      "NewJfenix": {
         "properties": {
-          "name": {
-            "type": "string"
-          },
           "description": {
-            "type": "string"
-          },
-          "approved": {
-            "type": "boolean",
-            "default": false
-          },
-          "user": {
-            "type": "string"
-          },
-          "web_page": {
-            "type": "string"
-          },
-          "social_media": {
             "type": "string"
           },
           "published_at": {
@@ -713,5 +403,9 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Jfenix"
+    }
+  ]
 }

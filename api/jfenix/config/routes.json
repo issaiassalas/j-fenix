@@ -1,0 +1,36 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/jfenix",
+      "handler": "jfenix.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/jfenix/history",
+      "handler": "jfenix.getHistory",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/jfenix",
+      "handler": "jfenix.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/jfenix",
+      "handler": "jfenix.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

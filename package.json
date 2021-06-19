@@ -11,6 +11,10 @@
   },
   "devDependencies": {},
   "dependencies": {
+    "@waves.exchange/provider-cloud": "^1.0.2",
+    "@waves.exchange/provider-web": "^1.0.2",
+    "@waves/signer": "^1.0.2",
+    "axios": "^0.21.1",
     "knex": "0.21.18",
     "lodash": "^4.17.21",
     "mysql": "2.18.1",

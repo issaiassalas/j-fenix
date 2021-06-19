@@ -24,7 +24,7 @@
       "required": false,
       "pluginOptions": {}
     },
-    "descripction": {
+    "description": {
       "type": "string"
     },
     "approved": {
@@ -35,6 +35,12 @@
       "plugin": "users-permissions",
       "model": "user",
       "via": "affiliated_commerces"
+    },
+    "web_page": {
+      "type": "string"
+    },
+    "social_media": {
+      "type": "string"
     }
   }
 }

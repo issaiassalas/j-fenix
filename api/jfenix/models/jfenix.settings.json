@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "jfenixes",
+  "info": {
+    "name": "jfenix"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "description": {
+      "type": "string"
+    }
+  }
+}
