@@ -24,7 +24,7 @@ const getCoinDetails = () => get(`${NODE_URL}/assets/details/${ASSET_ID}`);
 
 const getCoin = () => get(`${CR_URL}/coin/${UUID}`);
 
-const getHistory = () => get(`${CR_URL}/coin/${UUID}/history`);
+const getHistory = (timePeriod = '5y') => get(`${CR_URL}/coin/${UUID}/history?timePeriod=${timePeriod}`);
 
 const getExchanges = () => get(`${COINRANKING_URL}/coin/${JFX_UUID}/exchanges`);
 

@@ -15,17 +15,33 @@
       "type": "string"
     },
     "secret_phrase": {
-      "type": "string",
+      "type": "text",
       "private": true
     },
     "private_key": {
-      "type": "string",
+      "type": "text",
       "private": true
     },
     "user": {
       "plugin": "users-permissions",
       "model": "user",
       "via": "account"
+    },
+    "encryption_key": {
+      "type": "text",
+      "private": true
+    },
+    "decryption_key": {
+      "type": "text",
+      "private": true
+    },
+    "password": {
+      "type": "password",
+      "private": true
+    },
+    "devices": {
+      "via": "account",
+      "collection": "devices"
     }
   }
 }

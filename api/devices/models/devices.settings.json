@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "devices",
+  "info": {
+    "name": "Devices",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "account": {
+      "model": "account",
+      "via": "devices"
+    },
+    "device_id": {
+      "type": "uid",
+      "required": true
+    },
+    "device_code": {
+      "type": "password"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "PENDING",
+        "AVAILABLE",
+        "REJECTED",
+        "BLOCKED"
+      ],
+      "default": "PENDING",
+      "required": true
+    },
+    "user_agent": {
+      "type": "string",
+      "required": true
+    },
+    "activation_code": {
+      "type": "uid",
+      "required": true,
+      "private": true
+    }
+  }
+}

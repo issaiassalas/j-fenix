@@ -1271,6 +1271,21 @@
               "user": {
                 "type": "string"
               },
+              "encryption_key": {
+                "type": "string"
+              },
+              "decryption_key": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "devices": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "created_by": {
                 "type": "string"
               },

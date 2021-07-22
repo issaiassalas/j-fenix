@@ -49,6 +49,14 @@
       }
     },
     {
+      "method": "POST",
+      "path": "/accounts/transfer",
+      "handler": "account.transferFunction",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "PUT",
       "path": "/accounts/:id",
       "handler": "account.update",

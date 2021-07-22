@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/accounts": {
+    "/devices": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the devices's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve devices document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Account"
+                    "$ref": "#/components/schemas/Devices"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Account"
+          "Devices"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new devices record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve devices document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Account"
+                  "$ref": "#/components/schemas/Devices"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Account"
+          "Devices"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAccount"
+                "$ref": "#/components/schemas/NewDevices"
               }
             }
           }
         }
       }
     },
-    "/accounts/count": {
+    "/devices/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of devices documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve devices document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,26 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Account"
+          "Devices"
         ],
         "parameters": []
       }
     },
-    "/accounts/balance": {
+    "/devices/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one devices record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve devices document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Devices"
                 }
               }
             }
@@ -363,117 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Account"
-        ],
-        "parameters": []
-      }
-    },
-    "/accounts/transactions": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Account"
-        ],
-        "parameters": []
-      }
-    },
-    "/accounts/{id}": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Account"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Account"
+          "Devices"
         ],
         "parameters": [
           {
@@ -490,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single devices record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve devices document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Account"
+                  "$ref": "#/components/schemas/Devices"
                 }
               }
             }
@@ -535,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Account"
+          "Devices"
         ],
         "requestBody": {
           "description": "",
@@ -543,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAccount"
+                "$ref": "#/components/schemas/NewDevices"
               }
             }
           }
@@ -563,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single devices record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single devices based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -609,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Account"
+          "Devices"
         ],
         "parameters": [
           {
@@ -625,13 +511,13 @@
         ]
       }
     },
-    "/accounts/transfer": {
-      "post": {
+    "/devices/activation/{id}/{code}": {
+      "get": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve devices document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -677,80 +563,77 @@
         },
         "summary": "",
         "tags": [
-          "Account"
+          "Devices"
         ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "properties": {
-                  "foo": {
-                    "type": "string"
-                  }
-                }
-              }
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
             }
           }
-        }
+        ]
       }
     }
   },
   "components": {
     "schemas": {
-      "Account": {
+      "Devices": {
         "required": [
-          "id"
+          "id",
+          "device_id",
+          "status",
+          "user_agent",
+          "activation_code"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "wallet": {
-            "type": "string"
-          },
-          "user": {
+          "account": {
             "required": [
-              "id",
-              "username",
-              "email"
+              "id"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "username": {
+              "wallet": {
                 "type": "string"
               },
-              "email": {
+              "secret_phrase": {
                 "type": "string"
               },
-              "provider": {
+              "private_key": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "encryption_key": {
+                "type": "string"
+              },
+              "decryption_key": {
                 "type": "string"
               },
               "password": {
                 "type": "string"
               },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmationToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "account": {
-                "type": "string"
-              },
-              "affiliated_commerces": {
+              "devices": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -764,87 +647,69 @@
               }
             }
           },
-          "devices": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "device_id",
-                "status",
-                "user_agent",
-                "activation_code"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "account": {
-                  "type": "string"
-                },
-                "device_id": {
-                  "type": "uid"
-                },
-                "device_code": {
-                  "type": "string"
-                },
-                "status": {
-                  "type": "string",
-                  "enum": [
-                    "PENDING",
-                    "AVAILABLE",
-                    "REJECTED",
-                    "BLOCKED"
-                  ]
-                },
-                "user_agent": {
-                  "type": "string"
-                },
-                "activation_code": {
-                  "type": "uid"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      },
-      "NewAccount": {
-        "properties": {
-          "wallet": {
-            "type": "string"
+          "device_id": {
+            "type": "uid"
           },
-          "secret_phrase": {
-            "type": "string"
-          },
-          "private_key": {
-            "type": "string"
-          },
-          "user": {
-            "type": "string"
-          },
-          "encryption_key": {
-            "type": "string"
-          },
-          "decryption_key": {
-            "type": "string"
-          },
-          "password": {
+          "device_code": {
             "type": "string",
             "format": "password"
           },
-          "devices": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "status": {
+            "type": "string",
+            "default": "PENDING",
+            "enum": [
+              "PENDING",
+              "AVAILABLE",
+              "REJECTED",
+              "BLOCKED"
+            ]
+          },
+          "user_agent": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewDevices": {
+        "required": [
+          "device_id",
+          "status",
+          "user_agent",
+          "activation_code"
+        ],
+        "properties": {
+          "account": {
+            "type": "string"
+          },
+          "device_id": {
+            "type": "uid"
+          },
+          "device_code": {
+            "type": "string",
+            "format": "password"
+          },
+          "status": {
+            "type": "string",
+            "default": "PENDING",
+            "enum": [
+              "PENDING",
+              "AVAILABLE",
+              "REJECTED",
+              "BLOCKED"
+            ]
+          },
+          "user_agent": {
+            "type": "string"
+          },
+          "activation_code": {
+            "type": "uid"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -858,7 +723,7 @@
   },
   "tags": [
     {
-      "name": "Account"
+      "name": "Devices"
     }
   ]
 }
