@@ -17,6 +17,14 @@
       }
     },
     {
+      "method": "GET",
+      "path": "/jfenix/history",
+      "handler": "jfenix.updateCoinData",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "PUT",
       "path": "/jfenix",
       "handler": "jfenix.update",

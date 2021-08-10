@@ -17,6 +17,12 @@ const getHistory = async (ctx) => {
     return data;
 }
 
+const updateCoinData = async (ctx) => {
+    const coinData = await strapi.config.functions.api.getCoinDetails();
+    await strapi.services['coin-details'].createOrUpdate(coinData);
+}
+
 module.exports = {
-    getHistory
+    getHistory,
+    updateCoinData
 };
