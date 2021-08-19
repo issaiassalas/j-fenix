@@ -21,13 +21,16 @@ const newPrice = async () => {
 
         let element = await page.$("#HoldingsUSD");
         const totalHolding = await page.evaluate(element => element.textContent, element);
+        console.log(totalHolding)
 
         element = await page.$("#tb1 > tr:nth-child(3) > td:nth-child(4)");
         const quantity = await page.evaluate(element => element.textContent, element);
+        console.log(quantity)
 
         const a = parseFloat(trimComma(totalHolding.substring(1)));
         const b = parseFloat(trimComma(quantity));
         const total = a / b;
+        console.log(total)
         
         await page.goto('https://bscscan.com/token/0xe467c3c666fda4955ffe8159a7bb475f40e112a3');
 
@@ -35,16 +38,18 @@ const newPrice = async () => {
 
         element = await page.$('#ContentPlaceHolder1_tr_tokenHolders > div > div > div > div');
         const totalHolders = await page.evaluate(element => element.textContent, element);
+        console.log(totalHolders)
 
         element = await page.$('#ContentPlaceHolder1_trNoOfTxns > div > div > span');
         const transactionsNum = await page.evaluate(element => element.textContent, element);
+        console.log(transactionsNum)
 
         if (totalHolding && quantity && total && totalHolders && transactionsNum) {
             await strapi.query('j-fenix-price').create({
                 price: total,
-                total_holding: totalHolding,
-                quantity: quantity,
-                num_holders: totalHolders,
+                total_holding: a,
+                quantity: b,
+                num_holders: totalHolders.split(' ')[0],
                 num_transactions: transactionsNum
             });
         }
