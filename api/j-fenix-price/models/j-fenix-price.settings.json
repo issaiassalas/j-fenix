@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "j_fenix_prices",
+  "info": {
+    "name": "JFenixPrice",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "price": {
+      "type": "float"
+    },
+    "total_holding": {
+      "type": "float"
+    },
+    "quantity": {
+      "type": "float"
+    },
+    "num_holders": {
+      "type": "integer"
+    },
+    "num_transactions": {
+      "type": "biginteger"
+    }
+  }
+}

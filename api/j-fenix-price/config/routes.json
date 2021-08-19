@@ -1,0 +1,68 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/j-fenix-prices",
+      "handler": "j-fenix-price.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/j-fenix-prices/count",
+      "handler": "j-fenix-price.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/j-fenix-prices/refresh",
+      "handler": "j-fenix-price.refresh",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/j-fenix-prices/last",
+      "handler": "j-fenix-price.last",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/j-fenix-prices/:id",
+      "handler": "j-fenix-price.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/j-fenix-prices",
+      "handler": "j-fenix-price.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/j-fenix-prices/:id",
+      "handler": "j-fenix-price.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/j-fenix-prices/:id",
+      "handler": "j-fenix-price.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
